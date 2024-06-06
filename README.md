@@ -2,6 +2,41 @@
 
 This is the pytorch implementation of [Split-Lohmann Multifocal Displays](https://imaging.cs.cmu.edu/split_lohmann/). For the simulation code in matlab, please refer to [our original code release repo](https://github.com/Image-Science-Lab-cmu/SplitLohmann).
 
+## Getting Started
+
+#### Requirements
+
+```
+pip install numpy matplotlib
+pip3 install torch torchvision torchaudio
+pip install pytorch-lightning kornia
+```
+
+`simulation.ipynb` walks through the simulation pipeline to generate a focal stack using the Split-Lohmann system.
+
+`time_multiplexed_multifocals.ipynb` walks through the pipeline to generate a focal stack using a time-multiplexed multifocal display.
+
+This documentation for this repo is under development. For complete documentation, please refer to [our original code release repo](https://github.com/Image-Science-Lab-cmu/SplitLohmann).
+
+## Example Focal Stack Result
+
+The focal stack result below was generated using `32` propagation iterations; each initialized with a wavefront having a random phase at each point.
+
+To obtain the most realistic output, increase the `num_rounds` number in `simulation.ipynb`.\
+Increasing this number will reduce the amount of speckle noise in the focal stack images.
+
+![](results/Whiskey_splitlohmann_result.gif)
+
+## Scene Credits
+
+If you use any of our provided scenes, please also credit the courtesy source of the 3D scene or asset.
+
+- Whiskey scene: "Dark Interior Scene" 3D scene courtesy of “Entity Designer” at Blender Market.
+- Motorcycle scene: 3D scene courtesy of the Middlebury 2014 Stereo Dataset [Scharstein et al. 2014].
+- CastleCity scene: "Scanlands" 3D scene courtesy of Piotr Krynski at Blender Studio.
+
+## Citation
+
 If you use our code or dataset, please cite our paper:
 ```
 @article{Qin_SplitLohmann,
@@ -28,35 +63,3 @@ keywords = {multifocal displays, computational displays, vergence-accomodation c
 Visit the links below for more information:\
  [[Paper](https://dl.acm.org/doi/abs/10.1145/3592110)] [[Supplemental PDF](https://yingsiqin.github.io/assets/pdfs/SplitLohmann_SIGGRAPH23-supp.pdf)] [[Project Website](https://imaging.cs.cmu.edu/split_lohmann/)]\
  [[6-Minute Video](https://youtu.be/9lbg8qOCjUM)] [[3-Minute Video](https://youtu.be/0Z4W1DJO_nw)] [[10-Minute Talk @ SIGGRAPH 2023](https://youtu.be/1qH6yvEWd5c)]
-
-## Getting Started
-
-#### Requirements
-
-```
-pip install numpy matplotlib
-pip3 install torch torchvision torchaudio
-pip install pytorch-lightning kornia
-```
-
-`simulation.ipynb` walks through the simulation pipeline to generate a focal stack using the Split-Lohmann system.
-
-`time_multiplexed_multifocals.ipynb` walks through the pipeline to generate a focal stack using a time-multiplexed multifocal display.
-
-This documentation for this repo is under development. For complete documentation, please refer to [our original code release repo](https://github.com/Image-Science-Lab-cmu/SplitLohmann).
-
-## Example Focal Stack Result
-The focal stack result below was generated using `32` propagation iterations; each initialized with a wavefront having a random phase at each point.
-
-To obtain the most realistic output, increase the `num_rounds` number in `simulation.ipynb`.\
-Increasing this number will reduce the amount of speckle noise in the focal stack images.
-
-![](results/Whiskey_splitlohmann_result.gif)
-
-## Scene Credits
-
-If you use any of our provided scenes, please also credit the courtesy source of the 3D scene or asset.
-
-- Whiskey scene: "Dark Interior Scene" 3D scene courtesy of “Entity Designer” at Blender Market.
-- Motorcycle scene: 3D scene courtesy of the Middlebury 2014 Stereo Dataset [Scharstein et al. 2014].
-- CastleCity scene: "Scanlands" 3D scene courtesy of Piotr Krynski at Blender Studio.

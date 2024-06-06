@@ -44,3 +44,19 @@ pip install pytorch-lightning kornia
 `time_multiplexed_multifocals.ipynb` walks through the pipeline to generate a focal stack using a time-multiplexed multifocal display.
 
 This documentation for this repo is under development. For complete documentation, please refer to [our original code release repo](https://github.com/Image-Science-Lab-cmu/SplitLohmann).
+
+## Example Focal Stack Result
+The focal stack result below was generated using `100` propagation iterations; each initialized with a wavefront having a random phase at each point.
+
+To obtain the most realistic output, increase the `num_rounds` number in `simulation.ipynb`.\
+Increasing this number will reduce the amount of speckle noise in the focal stack images.
+
+![](results/Whiskey_splitlohmann_result.gif)
+
+## Scene Credits
+
+If you use any of our provided scenes, please also credit the courtesy source of the 3D scene or asset.
+
+- Whiskey scene: "Dark Interior Scene" 3D scene courtesy of “Entity Designer” at Blender Market.
+- Motorcycle scene: 3D scene courtesy of the Middlebury 2014 Stereo Dataset [Scharstein et al. 2014].
+- CastleCity scene: "Scanlands" 3D scene courtesy of Piotr Krynski at Blender Studio.

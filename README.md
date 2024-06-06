@@ -46,7 +46,7 @@ pip install pytorch-lightning kornia
 This documentation for this repo is under development. For complete documentation, please refer to [our original code release repo](https://github.com/Image-Science-Lab-cmu/SplitLohmann).
 
 ## Example Focal Stack Result
-The focal stack result below was generated using `100` propagation iterations; each initialized with a wavefront having a random phase at each point.
+The focal stack result below was generated using `32` propagation iterations; each initialized with a wavefront having a random phase at each point.
 
 To obtain the most realistic output, increase the `num_rounds` number in `simulation.ipynb`.\
 Increasing this number will reduce the amount of speckle noise in the focal stack images.
